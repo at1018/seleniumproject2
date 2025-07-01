@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 41.90 s <<< FAILURE! -- in TestSuite
-seleniumframeworkdesign.StandAloneTest3.loginErrorValidation -- Time elapsed: 0.882 s <<< FAILURE!
+Tests run: 5, Failures: 2, Errors: 0, Skipped: 1, Time elapsed: 39.33 s <<< FAILURE! -- in TestSuite
+seleniumframeworkdesign.StandAloneTest3.loginErrorValidation -- Time elapsed: 1.417 s <<< FAILURE!
 java.lang.AssertionError: expected [Incorrect email or password.] but found [Incorrect email password.]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)
@@ -32,7 +32,7 @@ java.lang.AssertionError: expected [Incorrect email or password.] but found [Inc
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at java.base/java.lang.Thread.run(Thread.java:1583)
 
-seleniumframeworkdesign.StandAloneTest3.submitOrder -- Time elapsed: 15.47 s <<< FAILURE!
+seleniumframeworkdesign.StandAloneTest3.submitOrder -- Time elapsed: 14.43 s <<< FAILURE!
 java.lang.AssertionError: expected [true] but found [false]
 	at org.testng.Assert.fail(Assert.java:111)
 	at org.testng.Assert.failNotEquals(Assert.java:1590)

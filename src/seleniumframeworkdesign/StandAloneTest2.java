@@ -74,14 +74,22 @@ public class StandAloneTest2 extends BaseTest{
 		String confirmationMessage=confirmmessage.getMessage();
 		Assert.assertTrue(confirmationMessage.equalsIgnoreCase("Thankyou for the order."));
 	}
-	@Test(dependsOnMethods= {"submitOrder"})
-	public void orderHistory(String productName) {
-		landingpage.landingApplication("ankit1234@gmail.com", "Abcd@1234");
+	@Test(dependsOnMethods= {"submitOrder"}, dataProvider="getData")
+	public void orderHistory(HashMap<String, String> input) {
+		landingpage.landingApplication(input.get("email"), input.get("password"));
 		OrderHistoryPage orderhistory=new OrderHistoryPage(driver);
 		orderhistory.goToOrderHistory();
-		Assert.assertTrue(orderhistory.myOrders(productName));
+		Assert.assertTrue(orderhistory.myOrders(input.get("productName")));
 		
 	}
+//	@Test(dependsOnMethods= {"submitOrder"}, dataProvider="getData")
+//	public void orderHistory(String productName) {
+//		landingpage.landingApplication("ankit1234@gmail.com", "Abcd@1234");
+//		OrderHistoryPage orderhistory=new OrderHistoryPage(driver);
+//		orderhistory.goToOrderHistory();
+//		Assert.assertTrue(orderhistory.myOrders(productName));
+//		
+//	}
 //	public String getScreenshot(String testCaseName) throws IOException {
 //		TakesScreenshot Ts= (TakesScreenshot) driver;
 //		File source=Ts.getScreenshotAs(OutputType.FILE);
